@@ -1,6 +1,6 @@
 <?php
 
-namespace JsonApi\App\Controller;
+namespace JsonApi\Controller;
 
 trait JsonResponseTrait
 {

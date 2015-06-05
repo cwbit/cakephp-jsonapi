@@ -11,7 +11,7 @@
  * @usage To JSONifiy a controllers reactions, just add this trait to it
  */
 
-namespace JsonApi\App\Controller;
+namespace JsonApi\Controller;
 
 trait JsonControllerTrait
 {

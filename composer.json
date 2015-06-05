@@ -1,0 +1,36 @@
+{
+    "name": "cwbit/cakephp-jsonapi",
+    "description" : "A set of libs for building standardized JSON responses in CakePHP 3.x REST APIs",
+    "type" : "cakephp-plugin",
+    "keywords": ["cakephp", "plugin", "jsonapi", "json", "api", "rest"],
+    "homepage": "https://github.com/cwbit/cakephp-jsonapi",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Brescia",
+            "homepage": "https://github.com/cwbit/",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "cakephp/cakephp": "~3.0"
+    },
+    "support": {
+        "source": "https://github.com/cwbit/cakephp-jsonapi"
+    },
+    "autoload": {
+        "psr-4": {
+            "JsonApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JsonApi\\Test\\": "tests",
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests"
+        }
+    },
+    "extra": {
+        "installer-name": "JsonApi"
+    }
+}

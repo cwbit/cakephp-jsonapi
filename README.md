@@ -31,7 +31,7 @@ Add the `JsonResponseTrait` to expose a number of response functions (detailed b
 This plugin is on Packagist which means it can be easily installed with Composer.
 
 ```
-composer require cwbit/cakephp-jsonapi
+composer require cwbit/cakephp-jsonapi:dev-master
 ```
 Then simply load the plugin normally in your `config/bootstrap.php` file
 
@@ -42,7 +42,9 @@ Plugin::load('JsonApi');
 
 #### Manual Install
 
-You can also manually load this plugin in your App
+You can also manually load this plugin in your App.
+
+:warning: Installing the plugin without the use of Composer is not officially supported. You do so at your own risk.
 
 ##### loading the plugin in your app
 Add the source code in this project into `plugins/JsonApi`

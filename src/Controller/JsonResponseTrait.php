@@ -80,9 +80,6 @@ trait JsonResponseTrait
      */
     public function respondWithMovedPermanently($message = '', array $data = [])
     {
-        // if ($this->request->is(['GET', 'HEAD'])) :
-        //     $this->response->header('Location', .. )
-        // endif;
         $this->respondWith('301', $message, $data);
     }
 
@@ -99,9 +96,6 @@ trait JsonResponseTrait
      */
     public function respondWithMovedTemporarily($message = '', array $data = [])
     {
-        // if ($this->request->is(['GET', 'HEAD'])) :
-        //     $this->response->header('Location', .. )
-        // endif;
         $this->respondWith('302', $message, $data);
     }
 

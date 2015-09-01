@@ -132,15 +132,22 @@ class FoosController extends AppController
 The `JsonResponseTrait` exposes the following response functions
 
 * `respondWith($statusCode, $message, $data)`
+* **SUCCESS**
 * `respondWithOK($message, $data)` - Status **200** - OK
 * `respondWithCreated($message, $data)` - Status **201** - CREATED
 * `respondWithNoContent($message, $data)` - Status **204** - NO CONTENT
+* **REDIRECTION**
+* `respondWithMovedPermanently($message, $data)` - Status **301** - MOVED PERMANENTLY
+* `respondWithMovedTemporarily($message, $data)` - Status **302** - MOVED TEMPORARILY
+* `respondWithSeeOther($message, $data)` - Status **303** - SEE OTHER
+* **CLIENT ERROR**
 * `respondWithBadRequest($message, $data)` - Status **400** - BAD REQUEST
 * `respondWithUnauthorized($message, $data)` - Status **401** - UNAUTHORIZED
 * `respondWithForbidden($message, $data)` - Status **403** - FORBIDDEN
 * `respondWithNotFound($message, $data)` - Status **404** - NOT FOUND
 * `respondWithMethodNotAllowed($message, $data)` - Status **405** - METHOD NOT ALLOWED
 * `respondWithConflict($message, $data)` - Status **409** - CONFLICT
+* **SERVER ERROR**
 * `respondWithInternalServerError($message, $data)` - Status **500** - INTERNAL SERVER ERROR
 
 ## Contributing

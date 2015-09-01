@@ -95,8 +95,8 @@ Then, create an Api controller inside `src/Controller/Api`
 namespace App\Controller\Api;
 
 use App\Controller\AppController as Controller;
-use App\Controller\Api\JsonControllerTrait;
-use App\Controller\Api\JsonResponseTrait;
+use JsonApi\Controller\JsonControllerTrait;
+use JsonApi\Controller\JsonResponseTrait;
 
 class AppController extends Controller
 {

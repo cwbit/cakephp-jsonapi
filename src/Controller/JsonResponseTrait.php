@@ -22,7 +22,7 @@ trait JsonResponseTrait
      */
     protected function respondWith($statusCode, $message = '', array $data = [])
     {
-        $this->response->header('Status', $statusCode);
+        $this->response->statusCode($statusCode);
         $this->set('data', $data);
         $this->set('message', $message);
         $this->set('_serialize', ['data', 'message']);

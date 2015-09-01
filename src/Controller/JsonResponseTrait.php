@@ -70,6 +70,57 @@ trait JsonResponseTrait
     }
 
     /**
+     * 301 - MOVED PERMANENTLY
+     * Indicates the requested resource is now permanently available at a different URI address.
+     * If request method was something other than GET or HEAD the redirect MUST NOT happen automatically
+     *
+     * @param string $message
+     * @param array $data
+     * @return
+     */
+    public function respondWithMovedPermanently($message = '', array $data = [])
+    {
+        // if ($this->request->is(['GET', 'HEAD'])) :
+        //     $this->response->header('Location', .. )
+        // endif;
+        $this->respondWith('301', $message, $data);
+    }
+
+    /**
+     * 302 - MOVED TEMPORARILY
+     * Indicates the requested resource is temporarily available at a different URI address.
+     * If request method was something other than GET or HEAD the redirect MUST NOT happen automatically
+     *
+     * Sometimes, incorrectly, used as a 303 request. 303-307 codes allow more advanced clients to dictate explicit responses.
+     *
+     * @param string $message
+     * @param array $data
+     * @return
+     */
+    public function respondWithMovedTemporarily($message = '', array $data = [])
+    {
+        // if ($this->request->is(['GET', 'HEAD'])) :
+        //     $this->response->header('Location', .. )
+        // endif;
+        $this->respondWith('302', $message, $data);
+    }
+
+    /**
+     * 303 - SEE OTHER
+     * Indicates a redirection based on the outcome of the previous request. This is not exactly the same as a 302, nor should it replace a 301 or 302 error.
+     * It is used, for example, when the result of a POSTed URI results in a redirection to another GETable resource. (e.g. on creation, redirect to view page)
+     * The implemenetation here should be used with some sort of HAL or HATEOS type _links array to specify the new target
+     *
+     * @param string $message
+     * @param array $data
+     * @return
+     */
+    public function respondWithSeeOther($message = '', array $data = [])
+    {
+        $this->respondWith('303', $message, $data);
+    }
+
+    /**
      * 400 - BAD REQUEST
      * General error when fulfilling the request would cause an invalid state. Domain validation errors, missing data, etc. are some examples.
      *
